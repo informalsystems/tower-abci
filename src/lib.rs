@@ -2,8 +2,10 @@
 
 use tendermint::abci::{
     ConsensusRequest, ConsensusResponse, InfoRequest, InfoResponse, MempoolRequest,
-    MempoolResponse, Request, Response, SnapshotRequest, SnapshotResponse,
+    MempoolResponse, SnapshotRequest, SnapshotResponse,
 };
+
+use tendermint::v0_34::abci::{Request, Response};
 
 /// A fork of tower::buffer @ `e1760d38` that has four queues feeding
 /// the same worker task, with different priorities.

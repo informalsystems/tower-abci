@@ -8,11 +8,12 @@ use std::{
 };
 
 use bytes::Bytes;
-use futures::future::FutureExt;
+use futures::FutureExt;
 use structopt::StructOpt;
 use tower::{Service, ServiceBuilder};
 
-use tendermint::abci::{response, Event, EventAttributeIndexExt, Request, Response};
+use tendermint::abci::{response, Event, EventAttributeIndexExt};
+use tendermint::v0_34::abci::{Request, Response};
 
 use tower_abci::{split, BoxError, Server};
 
